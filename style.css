@@ -18,15 +18,15 @@ body {
     position: relative;
 }
 
-body, .clock, .hand {
+body, .clock, .hand, .box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .clock {
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
     border: none;
     border-radius: 50%;
@@ -50,7 +50,7 @@ body, .clock, .hand {
 .clock span b {
     transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .clock::before {
@@ -60,7 +60,7 @@ body, .clock, .hand {
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    z-index: 3;
+    z-index: 8;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -71,12 +71,13 @@ body, .clock, .hand {
     background-color: #4b48ff;
     border-radius: 50%;
     position: absolute;
-    z-index: 3;
+    z-index: 9;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .hand {
     position: absolute;
+    z-index: 5;
     align-items: flex-end;
 }
 
@@ -88,6 +89,21 @@ body, .clock, .hand {
     border-top-right-radius: 80%;
     border-top-left-radius: 80%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.box {
+    position: absolute;
+    top: 68%;
+    width: 140px;
+    height: 30px;
+    background-color: #727272;
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+    gap: 5px;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
 .title {
